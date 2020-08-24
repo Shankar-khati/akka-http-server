@@ -28,7 +28,7 @@ public class MainClass extends AllDirectives {
         CompletionStage<ServerBinding> futureBinding =
                 http.bindAndHandle(routeFlow, ConnectHttp.toHost("localhost", 8080), materializer);
         try {
-            System.out.println("Server online at http://localhost:8080/\nPress RETURN to stop...");
+            system.log().info("Server online at http://localhost:8080/\nPress Enter to stop...");
             System.in.read(); // let it run until user presses return
 
         } catch ( Exception e) {}
